@@ -34,7 +34,7 @@ function create(){
     game.physics.arcade.enable(player);
 
     obstacle = game.add.sprite(800,game.world.height, 'obstacle'); 
-    obstacle.scale.setTo(1,1.5);
+    obstacle.scale.setTo(1,2);
     obstacle.anchor.setTo(0,1);
     game.physics.arcade.enable(obstacle);
     obstacle.body.immovable = true;
@@ -84,12 +84,12 @@ function update(){
       obstacle.x -= 0.05;
     }
     if (obstacle2.x > 600) { 
-      obstacle2.x -= 0.10;
+      obstacle2.x -= 0.05;
     }
     if (obstacle.x < 0) { 
        obstacle.kill();
        obstacle= game.add.sprite(900, GAME_HEIGHT, 'obstacle');
-       obstacle.scale.setTo(1,1.5);
+       obstacle.scale.setTo(1,2);
        obstacle.anchor.setTo(0,1);
        game.physics.arcade.enable(obstacle);
        obstacle.body.immovable = true;
